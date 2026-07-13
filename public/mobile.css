@@ -1,0 +1,28 @@
+/* ============================================
+   Acceptor — mobile.css
+   Responsive overrides. Every rule here must use
+   var(--frame) / var(--line) / var(--cream*) etc.
+   rather than hardcoded rgba literals — hardcoding
+   breaks if/when the theme is ever overridden again.
+   ============================================ */
+
+@media(max-width:900px){
+  .shell{width:100%;border-left:none;border-right:none;}
+  .twoup{display:block;padding:0;border-top:1px solid var(--frame);}
+  .twoup::before{display:none;}
+  .twoup .col{padding:80px 34px;border-bottom:1px solid var(--frame);}
+  .bleed{display:block;border-top:none;}
+  .bleed .copy{padding:80px 34px;text-align:center;border-right:none;border-bottom:1px solid var(--frame);}
+  .bleed .copy h2,.bleed .copy p{width:100%;text-align:center;margin-left:auto;margin-right:auto;}
+  .bleed .stage{min-height:520px;}
+  .process-grid,.pillars{grid-template-columns:1fr 1fr;}
+  .stat-strip{grid-template-columns:1fr;}
+  .stat-cell{border-right:none;border-bottom:1px solid var(--frame);}
+  .fcols{grid-template-columns:1fr 1fr;}
+  .fbrand{grid-column:1/-1;}
+  .nav-right .lnk{display:none;}
+}
+@media(max-width:560px){
+  .process-grid,.pillars{grid-template-columns:1fr;}
+  .disclosure .acard{grid-template-columns:1fr;}
+}
