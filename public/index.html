@@ -1,9 +1,18 @@
 <!DOCTYPE html>
+<!--
+  INTERNAL CONCEPT DRAFT — NOT FOR PUBLIC DEPLOYMENT
+  This version positions Acceptor as a payments provider rather than a
+  referral consultancy, for internal pitch/negotiation purposes only
+  (e.g. building a case for a Fat Zebra partnership conversation).
+  Before any public launch, copy must be reverted to accurately reflect
+  Acceptor's actual role as a referral consultancy, per AU Consumer Law
+  and card-network disclosure requirements discussed during this build.
+-->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Acceptor — payments processing, matched right</title>
+<title>Acceptor — payments infrastructure for growing businesses</title>
 <meta name="theme-color" content="#FAF7F1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,8 +43,8 @@
 
 <section class="hero">
   <div class="wrap">
-    <h1 class="serif">Payments processing. Matched right.</h1>
-    <p class="sub">Tell us how you take payments today. We benchmark your rate, match you to an accredited provider, and negotiate the terms — so you get enterprise pricing without doing it yourself.</p>
+    <h1 class="serif">Payments infrastructure. Built for growth.</h1>
+    <p class="sub">Card-present, online, recurring and BNPL — one platform, full reporting, and the best rates in market. Everything a growing business needs to accept payments, in one place.</p>
     <div class="cta">
       <a href="#estimator" class="btn btn-cream btn-lg">Get my rate
         <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -54,7 +63,7 @@
           <div class="msg-you">Card fees are eating into our margin and I don't know if we're overpaying.</div>
           <div class="msg-them">Common story. Send a recent statement and I'll benchmark it against current market rates.</div>
           <div class="msg-you">Ok, uploading now</div>
-          <div class="msg-them">Got it — looks like you're on a blended rate. We can likely get you to <span class="rate">~1.4%</span>, matched to an accredited provider.</div>
+          <div class="msg-them">Got it — looks like you're on a blended rate. On our platform, this business would run at <span class="rate">~1.4%</span>.</div>
         </div>
         <div class="cinput">Message Acceptor…</div>
       </div>
@@ -85,18 +94,18 @@
     </div>
   </div>
   <div class="col">
-    <h2 class="serif">Map the right PayFac or PSP</h2>
-    <p>We compare your business against a network of accredited payment facilitators and PSPs — and shortlist the ones actually suited to your volume, category and risk profile.</p>
+    <h2 class="serif">One platform. Every payment type.</h2>
+    <p>Card schemes, digital wallets, BNPL and bank rails — all integrated into a single platform, with reporting that shows you exactly what's happening across every channel.</p>
     <div class="vis">
       <div class="provider-web">
-        <img src="images/partner-web.png" alt="Acceptor payment partner network" class="partner-web-image">
+        <img src="images/partner-web.png" alt="Acceptor payments network" class="partner-web-image">
         <div class="web-node pw-n1">Retail</div>
         <div class="web-node pw-n2">Hospitality</div>
         <div class="web-node pw-n3">E‑commerce</div>
         <div class="web-node pw-n4">Services</div>
         <div class="web-node pw-n5">High volume</div>
         <div class="web-node pw-n6">Low risk</div>
-        <div class="web-core"><strong>Match</strong><span>engine</span></div>
+        <div class="web-core"><strong>Acceptor</strong><span>platform</span></div>
       </div>
     </div>
   </div>
@@ -105,7 +114,7 @@
 <section class="bleed" id="estimator">
   <div class="copy">
     <h2 class="serif">Turn one statement<br>into a plan</h2>
-    <p>Adjust the numbers to see roughly where your business would land. It's the same starting point we'd refine properly in your free review — before any provider is chosen.</p>
+    <p>Adjust the numbers to see roughly where your business would land on our platform. It's the same starting point we'd refine properly in your free review.</p>
   </div>
   <div class="stage">
     <canvas class="mg" id="bleed-mg"></canvas>
@@ -178,7 +187,7 @@
       <div class="qcard">
         <div class="qstars">★★★★★</div>
         <div class="qt">"Finally understood what we were actually paying."</div>
-        <div class="qb">Our old statement made no sense. Acceptor broke it down in plain English and matched us to a better fit.</div>
+        <div class="qb">Our old statement made no sense. Acceptor broke it down in plain English and put us on a much better rate.</div>
         <div class="qa">Placeholder Name <span>— Director, Placeholder Clinic</span></div>
       </div>
       <div class="qcard">
@@ -205,25 +214,25 @@
     <div class="pillars">
       <div class="pillar">
         <span class="tag">Simplicity</span>
-        <h3>One conversation, not six quotes</h3>
-        <p>One advisor from first chat to first transaction. We handle the comparisons, paperwork and setup calls.</p>
+        <h3>One platform, one advisor</h3>
+        <p>One advisor from first chat to go-live. We handle setup, paperwork and onboarding end to end.</p>
         <span class="metric">1 advisor · start to finish</span>
       </div>
       <div class="pillar">
         <span class="tag">Cost reduction</span>
-        <h3>We negotiate like it's our money</h3>
-        <p>Most merchants are on blended pricing they've never questioned. We benchmark and negotiate interchange-level rates.</p>
+        <h3>The best rates in market</h3>
+        <p>Most merchants are on blended pricing they've never questioned. We benchmark your statement and put you on interchange-level pricing.</p>
         <span class="metric">27% avg. reduction found</span>
       </div>
       <div class="pillar" id="reliability">
         <span class="tag">Reliability</span>
-        <h3>Matched to providers built to stay up</h3>
-        <p>Only accredited PayFacs and PSPs make the shortlist — chosen for your risk profile and volume, not who pays us the most.</p>
-        <span class="metric">99.9%+ uptime providers</span>
+        <h3>Infrastructure built to stay up</h3>
+        <p>Enterprise-grade uptime, PCI DSS compliant processing, and 24/7 support behind every transaction.</p>
+        <span class="metric">99.9%+ uptime</span>
       </div>
     </div>
     <div class="acard">
-      <div class="arow"><span class="l">Provider accreditation</span><span class="v">PCI DSS compliant only</span></div>
+      <div class="arow"><span class="l">Platform compliance</span><span class="v">PCI DSS Level 1</span></div>
       <div class="arow"><span class="l">Merchant support</span><span class="v">24/7 access</span></div>
       <div class="arow"><span class="l">Advisor coverage</span><span class="v">AU‑based, human</span></div>
     </div>
@@ -234,16 +243,16 @@
   <div class="wrap">
     <span class="eyebrow" style="justify-content:center;"><span class="dot"></span>WHAT WE COVER</span>
     <h2 class="serif">Every way your customers<br>pay, covered.</h2>
-    <p class="sub">Whatever your business takes today — or wants to take next — we match you to a provider that handles it properly.</p>
+    <p class="sub">Whatever your business takes today — or wants to take next — it's already built into the platform.</p>
     <div class="process-grid" style="grid-template-columns:repeat(4,1fr);margin-top:56px;">
-      <div class="process-card"><h3>Card-present</h3><p>EFTPOS terminals, tap-to-pay, PIN and chip — in-store hardware matched to your footprint.</p></div>
+      <div class="process-card"><h3>Card-present</h3><p>EFTPOS terminals, tap-to-pay, PIN and chip — in-store hardware sized to your footprint.</p></div>
       <div class="process-card"><h3>Online checkout</h3><p>Hosted payment pages, embedded checkout, or full API integration for custom builds.</p></div>
       <div class="process-card"><h3>Recurring &amp; subscriptions</h3><p>Tokenised billing, retry logic and dunning management for membership and subscription models.</p></div>
-      <div class="process-card"><h3>Buy now, pay later</h3><p>Afterpay, Zip and other BNPL rails, matched where they genuinely lift conversion.</p></div>
-      <div class="process-card"><h3>Digital wallets</h3><p>Apple Pay, Google Pay and tap-and-go — standard on every provider we shortlist.</p></div>
+      <div class="process-card"><h3>Buy now, pay later</h3><p>Afterpay, Zip and other BNPL rails, built in wherever they genuinely lift conversion.</p></div>
+      <div class="process-card"><h3>Digital wallets</h3><p>Apple Pay, Google Pay and tap-and-go — standard across the platform.</p></div>
       <div class="process-card"><h3>Multi-currency</h3><p>Accept and settle in foreign currencies for businesses selling across borders.</p></div>
       <div class="process-card"><h3>Invoicing &amp; payment links</h3><p>Send a link, take a card payment, get paid — no terminal required.</p></div>
-      <div class="process-card"><h3>Fraud &amp; chargeback protection</h3><p>Built-in risk screening and dispute handling from every accredited provider we work with.</p></div>
+      <div class="process-card"><h3>Fraud &amp; chargeback protection</h3><p>Built-in risk screening and dispute handling on every transaction.</p></div>
     </div>
   </div>
 </section>
@@ -254,9 +263,9 @@
     <h2 class="serif">Four steps.<br>Same order, every time.</h2>
     <div class="process-grid">
       <div class="process-card"><span class="step">01</span><h3>Free review</h3><p>Send a statement or answer a few questions. We map your current costs and flag what's overpriced.</p></div>
-      <div class="process-card"><span class="step">02</span><h3>PayFac/PSP match</h3><p>We shortlist accredited payment facilitators and PSPs suited to your volume, industry and risk profile — then refer you directly.</p></div>
-      <div class="process-card"><span class="step">03</span><h3>Negotiate &amp; set up</h3><p>We negotiate pricing on your behalf and manage onboarding, hardware and integration.</p></div>
-      <div class="process-card"><span class="step">04</span><h3>Ongoing review</h3><p>Rates drift. We check in against your statements and renegotiate when they do.</p></div>
+      <div class="process-card"><span class="step">02</span><h3>Platform setup</h3><p>We configure your account for your volume, industry and risk profile — hardware, gateway and reporting included.</p></div>
+      <div class="process-card"><span class="step">03</span><h3>Pricing &amp; onboarding</h3><p>We put you on benchmarked pricing and manage the entire onboarding, hardware and integration.</p></div>
+      <div class="process-card"><span class="step">04</span><h3>Ongoing review</h3><p>Rates drift. We check in against your statements and adjust your pricing when they do.</p></div>
     </div>
   </div>
 </section>
@@ -294,28 +303,28 @@
     <h2 class="serif">Before you get in touch.</h2>
     <div class="faq-list">
       <details class="faq-item" open>
-        <summary>Is Acceptor a payment processor?</summary>
-        <p>No. Acceptor is an independent consultancy — we review your setup and refer you to an accredited PayFac or PSP that suits your business. We're never the counterparty on your merchant agreement.</p>
+        <summary>Is Acceptor's platform PCI DSS compliant?</summary>
+        <p>Yes — Acceptor is PCI DSS Level 1 compliant, the highest security standard in the payments industry, across every transaction type on the platform.</p>
       </details>
       <details class="faq-item">
-        <summary>What does it cost me to use Acceptor?</summary>
-        <p>The review is free. If we refer you to a provider and you switch, we may receive a referral fee from that provider — it doesn't change the rate you're quoted.</p>
+        <summary>What does it cost to get started?</summary>
+        <p>Your initial review and rate benchmark is free, with no obligation. From there, pricing is based on your volume and payment mix — set out clearly before you go live.</p>
       </details>
       <details class="faq-item">
-        <summary>How long does switching actually take?</summary>
-        <p>Typically around 5 business days from signed application to live terminal, depending on the provider and whether new hardware needs to ship.</p>
+        <summary>How long does onboarding actually take?</summary>
+        <p>Typically around 5 business days from application to live terminal, including hardware dispatch and platform configuration.</p>
       </details>
       <details class="faq-item">
-        <summary>What if I'm already happy with my current provider?</summary>
-        <p>Then the free review still tells you whether "happy" also means "well-priced" — worth knowing either way, with no obligation to switch.</p>
+        <summary>What if I already have a payment provider?</summary>
+        <p>We manage the switch end-to-end — hardware, integration and account setup — with no disruption to trading while you move across.</p>
       </details>
       <details class="faq-item">
-        <summary>Is my statement data safe to share?</summary>
-        <p>Yes — statements are used only to benchmark your rate and are not shared beyond what's needed to prepare provider comparisons.</p>
+        <summary>Is my statement and transaction data safe?</summary>
+        <p>Yes — all data is handled under the same PCI DSS Level 1 controls that secure every transaction on the platform.</p>
       </details>
       <details class="faq-item">
-        <summary>Which providers does Acceptor work with?</summary>
-        <p>A panel of accredited Australian PayFacs and PSPs. Which one we refer you to depends on your volume, category and risk profile — never a fixed default.</p>
+        <summary>What payment types does Acceptor support?</summary>
+        <p>Card-present, online checkout, recurring billing, BNPL, digital wallets, multi-currency and invoicing — all on one platform, with full reporting across every channel.</p>
       </details>
     </div>
   </div>
@@ -326,9 +335,9 @@
     <div class="acard">
       <div class="flag"><div class="fi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></div></div>
       <div>
-        <h4>How Acceptor actually works</h4>
-        <p>Acceptor is an independent payments consultancy — not a bank, payment facilitator (PayFac), acquirer or PSP. We review your current setup, then refer you directly to the payment facilitator or PSP best suited to your business, and support the switch. You'll always know exactly who you're signing with before you do — Acceptor is never the counterparty on your merchant agreement.</p>
-        <p>Rates shown on this page are indicative, based on recent merchant outcomes. Your exact terms, contract and merchant agreement are with the PayFac/PSP you're referred to, not with Acceptor.</p>
+        <h4>How Acceptor works</h4>
+        <p>Acceptor is a payments platform built for growing Australian businesses — one account for card-present, online, recurring and BNPL payments, with reporting across every channel in one place.</p>
+        <p>Rates shown on this page are indicative, based on recent merchant outcomes. Final pricing is confirmed during onboarding, based on your volume and payment mix.</p>
       </div>
     </div>
   </div>
@@ -357,7 +366,7 @@
           <div class="acceptor-mark"><span></span><span></span></div>
           <span class="acceptor-word">Acceptor</span>
         </a>
-        <p>Independent payments consulting for Australian businesses. Matched to accredited providers, not locked to one.</p>
+        <p>Payments infrastructure for growing Australian businesses — every payment type, one platform.</p>
       </div>
       <div class="fcol">
         <h4>Product</h4>
@@ -377,7 +386,7 @@
         <a href="#">LinkedIn</a>
       </div>
     </div>
-    <div class="fcopy">Acceptor is a trading name of a payments consultancy and is not a bank, card acquirer, payment facilitator (PayFac) or payment service provider (PSP). Acceptor does not hold merchant funds and is not a party to your processing agreement. Acceptor refers businesses to third-party PayFacs and PSPs and may receive a referral fee for doing so. Indicative rates shown are estimates based on recent merchant outcomes and are not offers of credit or processing terms. Final pricing, contract terms and merchant agreement are determined solely by the PayFac/PSP you are referred to. © 2026 Acceptor. Placeholder branding for concept purposes.</div>
+    <div class="fcopy">Indicative rates shown are estimates based on recent merchant outcomes and are not offers of credit or processing terms. Final pricing and contract terms are confirmed during onboarding. © 2026 Acceptor. Placeholder branding for internal concept purposes only — not for public deployment.</div>
   </footer>
 </div>
 
