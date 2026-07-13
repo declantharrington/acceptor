@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acceptor — payments processing, matched right</title>
+<meta name="theme-color" content="#FAF7F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+<div class="shell">
+
+<header>
+  <div class="nav nav-wrap">
+    <a href="#" class="acceptor-logo" aria-label="Acceptor home">
+      <div class="acceptor-mark"><span></span><span></span></div>
+      <span class="acceptor-word">Acceptor</span>
+    </a>
+    <div class="nav-right">
+      <a href="#how-it-works" class="lnk">How it works</a>
+      <a href="#reliability" class="lnk">Reliability</a>
+      <a href="#process" class="lnk">The process</a>
+      <a href="#estimator" class="btn btn-cream nav-cta">Get my rate
+        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>NOW MATCHING · AU MERCHANTS</span>
+    <h1 class="serif">Payments processing.<br>Matched right.</h1>
+    <p class="sub">Tell us how you take payments today. We benchmark your rate, match you to an accredited provider, and negotiate the terms — so you get enterprise pricing without doing it yourself.</p>
+    <div class="cta">
+      <a href="#estimator" class="btn btn-cream btn-lg">Get my rate
+        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+  <div class="hero-stage">
+    <div class="hero-band"></div>
+    <div class="phone">
+      <div class="screen">
+        <div class="sbar"><span>11:43</span><span class="r">●●●</span></div>
+        <div class="chead">
+          <div class="acceptor-mark cm"><span></span><span></span></div>
+          <span class="nm">Acceptor</span>
+        </div>
+        <div class="chat">
+          <div class="msg-you">Card fees are eating into our margin and I don't know if we're overpaying.</div>
+          <div class="msg-them">Common story. Send a recent statement and I'll benchmark it against current market rates.</div>
+          <div class="msg-you">Ok, uploading now</div>
+          <div class="msg-them">Got it — looks like you're on a blended rate. We can likely get you to <span class="rate">~1.4%</span>, matched to an accredited provider.</div>
+        </div>
+        <div class="cinput">Message Acceptor…</div>
+      </div>
+    </div>
+  </div>
+  <div class="stat-strip">
+    <div class="stat-cell"><span class="label">Indicative rates from</span><div class="value"><span>1.2%</span> per txn</div></div>
+    <div class="stat-cell"><span class="label">Typical time to live</span><div class="value">5 <span>days</span></div></div>
+    <div class="stat-cell"><span class="label">Avg. fee reduction found</span><div class="value"><span>27%</span> on review</div></div>
+  </div>
+</section>
+
+<section class="twoup" id="how-it-works">
+  <div class="col">
+    <h2 class="serif">Read your statement</h2>
+    <p>Send a recent merchant statement and Acceptor pulls every fee, rate and hidden line item — no spreadsheets, no guessing what you're actually paying.</p>
+    <div class="vis">
+      <div class="statement-doc">
+        <div class="doc-header"><span>Merchant Statement.pdf</span><span class="doc-status">Analysing</span></div>
+        <div class="doc-lines"><i style="width:86%"></i><i style="width:72%"></i><i style="width:92%"></i><i style="width:58%"></i><i style="width:80%"></i></div>
+        <div class="scan-line"></div>
+        <div class="analysis-steps">
+          <div>Merchant detected</div>
+          <div>Current provider identified</div>
+          <div>Fees extracted</div>
+          <div class="active">Benchmarking market rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <h2 class="serif">Map the right PayFac or PSP</h2>
+    <p>We compare your business against a network of accredited payment facilitators and PSPs — and shortlist the ones actually suited to your volume, category and risk profile.</p>
+    <div class="vis">
+      <div class="provider-web">
+        <div class="web-node pw-n1">Retail</div>
+        <div class="web-node pw-n2">Hospitality</div>
+        <div class="web-node pw-n3">E‑commerce</div>
+        <div class="web-node pw-n4">Services</div>
+        <div class="web-node pw-n5">High volume</div>
+        <div class="web-node pw-n6">Low risk</div>
+        <div class="web-core"><strong>Match</strong><span>engine</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bleed" id="estimator">
+  <div class="copy">
+    <h2 class="serif">Turn one statement<br>into a plan</h2>
+    <p>Adjust the numbers to see roughly where your business would land. It's the same starting point we'd refine properly in your free review — before any provider is chosen.</p>
+  </div>
+  <div class="stage">
+    <div class="glass">
+      <div class="gh"><div class="t">Your estimate</div><div class="s">Updates as you adjust</div></div>
+
+      <div class="field">
+        <label>Monthly card turnover</label>
+        <div class="range-row">
+          <input type="range" id="turnover" min="5000" max="500000" step="5000" value="60000">
+          <span class="range-val" id="turnoverVal">$60,000</span>
+        </div>
+      </div>
+      <div class="field">
+        <label>Average transaction size</label>
+        <div class="range-row">
+          <input type="range" id="avgtx" min="10" max="500" step="5" value="65">
+          <span class="range-val" id="avgtxVal">$65</span>
+        </div>
+      </div>
+      <div class="field">
+        <label>Business type</label>
+        <div class="seg" id="segGroup">
+          <button data-mult="1.0" class="active">Retail</button>
+          <button data-mult="0.92">Hospitality</button>
+          <button data-mult="1.15">E‑com</button>
+          <button data-mult="1.3">Services</button>
+        </div>
+      </div>
+
+      <div class="plan-total">
+        <span>Estimated blended rate</span>
+        <strong id="rateOut">1.42<span>%</span></strong>
+      </div>
+      <div class="plan-row">
+        <div class="plan-main"><strong>Est. monthly processing cost</strong></div>
+        <div class="plan-saving" id="costOut" style="color:var(--stage-text)">$852</div>
+      </div>
+      <div class="plan-row">
+        <div class="plan-main"><strong>Est. monthly saving vs. blended avg.</strong></div>
+        <div class="plan-saving" id="saveOut">$204</div>
+      </div>
+      <div class="plan-row">
+        <div class="plan-main"><strong>Est. annual saving</strong></div>
+        <div class="plan-saving" id="saveYrOut">$2,448</div>
+      </div>
+      <div class="est-cta">
+        <a href="#process" class="btn btn-cream">Get my exact rate
+          <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="control">
+  <div class="wrap">
+    <span class="eyebrow" style="justify-content:center;"><span class="dot"></span>WHY BUSINESSES USE ACCEPTOR</span>
+    <h2 class="serif">Three things merchants<br>actually want.</h2>
+    <p class="sub">Everything else — terminals, gateways, statements — is detail in service of these.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="tag">Simplicity</span>
+        <h3>One conversation, not six quotes</h3>
+        <p>One advisor from first chat to first transaction. We handle the comparisons, paperwork and setup calls.</p>
+        <span class="metric">1 advisor · start to finish</span>
+      </div>
+      <div class="pillar">
+        <span class="tag">Cost reduction</span>
+        <h3>We negotiate like it's our money</h3>
+        <p>Most merchants are on blended pricing they've never questioned. We benchmark and negotiate interchange-level rates.</p>
+        <span class="metric">27% avg. reduction found</span>
+      </div>
+      <div class="pillar" id="reliability">
+        <span class="tag">Reliability</span>
+        <h3>Matched to providers built to stay up</h3>
+        <p>Only accredited PayFacs and PSPs make the shortlist — chosen for your risk profile and volume, not who pays us the most.</p>
+        <span class="metric">99.9%+ uptime providers</span>
+      </div>
+    </div>
+    <div class="acard">
+      <div class="arow"><span class="l">Provider accreditation</span><span class="v">PCI DSS compliant only</span></div>
+      <div class="arow"><span class="l">Merchant support</span><span class="v">24/7 access</span></div>
+      <div class="arow"><span class="l">Advisor coverage</span><span class="v">AU‑based, human</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="control" id="process">
+  <div class="wrap">
+    <span class="eyebrow" style="justify-content:center;"><span class="dot"></span>THE PROCESS</span>
+    <h2 class="serif">Four steps.<br>Same order, every time.</h2>
+    <div class="process-grid">
+      <div class="process-card"><span class="step">01</span><h3>Free review</h3><p>Send a statement or answer a few questions. We map your current costs and flag what's overpriced.</p></div>
+      <div class="process-card"><span class="step">02</span><h3>PayFac/PSP match</h3><p>We shortlist accredited payment facilitators and PSPs suited to your volume, industry and risk profile — then refer you directly.</p></div>
+      <div class="process-card"><span class="step">03</span><h3>Negotiate &amp; set up</h3><p>We negotiate pricing on your behalf and manage onboarding, hardware and integration.</p></div>
+      <div class="process-card"><span class="step">04</span><h3>Ongoing review</h3><p>Rates drift. We check in against your statements and renegotiate when they do.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="disclosure">
+  <div class="wrap">
+    <div class="acard">
+      <div class="flag"><div class="fi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></div></div>
+      <div>
+        <h4>How Acceptor actually works</h4>
+        <p>Acceptor is an independent payments consultancy — not a bank, payment facilitator (PayFac), acquirer or PSP. We review your current setup, then refer you directly to the payment facilitator or PSP best suited to your business, and support the switch. You'll always know exactly who you're signing with before you do — Acceptor is never the counterparty on your merchant agreement.</p>
+        <p>Rates shown on this page are indicative, based on recent merchant outcomes. Your exact terms, contract and merchant agreement are with the PayFac/PSP you're referred to, not with Acceptor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="serif">Get your number<br>in under 10 minutes.</h2>
+    <p>No obligation, no commitment — just a clear picture of what you should be paying.</p>
+    <div class="cta">
+      <a href="#estimator" class="btn btn-cream btn-lg">Start free review
+        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#" class="btn btn-ghost btn-lg">Talk to an advisor</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="footer-section">
+  <footer class="wrap">
+    <div class="fcols">
+      <div class="fbrand">
+        <a href="#" class="acceptor-logo" aria-label="Acceptor home">
+          <div class="acceptor-mark"><span></span><span></span></div>
+          <span class="acceptor-word">Acceptor</span>
+        </a>
+        <p>Independent payments consulting for Australian businesses. Matched to accredited providers, not locked to one.</p>
+      </div>
+      <div class="fcol">
+        <h4>Product</h4>
+        <a href="#how-it-works">How it works</a>
+        <a href="#estimator">Rate estimator</a>
+        <a href="#process">The process</a>
+      </div>
+      <div class="fcol">
+        <h4>Company</h4>
+        <a href="#reliability">Reliability</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="fcol">
+        <h4>Connect</h4>
+        <a href="mailto:hello@acceptor.com.au?subject=Enquiry">Support</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <div class="fcopy">Acceptor is a trading name of a payments consultancy and is not a bank, card acquirer, payment facilitator (PayFac) or payment service provider (PSP). Acceptor does not hold merchant funds and is not a party to your processing agreement. Acceptor refers businesses to third-party PayFacs and PSPs and may receive a referral fee for doing so. Indicative rates shown are estimates based on recent merchant outcomes and are not offers of credit or processing terms. Final pricing, contract terms and merchant agreement are determined solely by the PayFac/PSP you are referred to. © 2026 Acceptor. Placeholder branding for concept purposes.</div>
+  </footer>
+</div>
+
+<script>
+  const turnover = document.getElementById('turnover');
+  const avgtx = document.getElementById('avgtx');
+  const turnoverVal = document.getElementById('turnoverVal');
+  const avgtxVal = document.getElementById('avgtxVal');
+  const rateOut = document.getElementById('rateOut');
+  const costOut = document.getElementById('costOut');
+  const saveOut = document.getElementById('saveOut');
+  const saveYrOut = document.getElementById('saveYrOut');
+  const segGroup = document.getElementById('segGroup');
+  let mult = 1.0;
+
+  function fmt(n){ return '$' + Math.round(n).toLocaleString('en-AU'); }
+
+  function update(){
+    const t = parseInt(turnover.value, 10);
+    const a = parseInt(avgtx.value, 10);
+    turnoverVal.textContent = fmt(t);
+    avgtxVal.textContent = fmt(a);
+
+    let base = 1.9 - Math.min(t / 500000, 1) * 0.55 - Math.min(a / 500, 1) * 0.35;
+    base = base * mult;
+    base = Math.max(1.15, Math.min(base, 2.4));
+
+    const blendedAvg = 2.35;
+    const cost = t * (base / 100);
+    const costBlended = t * (blendedAvg / 100);
+    const saving = Math.max(costBlended - cost, 0);
+
+    rateOut.innerHTML = base.toFixed(2) + '<span>%</span>';
+    costOut.textContent = fmt(cost);
+    saveOut.textContent = fmt(saving);
+    saveYrOut.textContent = fmt(saving * 12);
+  }
+
+  turnover.addEventListener('input', update);
+  avgtx.addEventListener('input', update);
+  segGroup.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      segGroup.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      mult = parseFloat(btn.dataset.mult);
+      update();
+    });
+  });
+
+  update();
+</script>
+
+</body>
+</html>
