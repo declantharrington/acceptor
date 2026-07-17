@@ -38,7 +38,17 @@
       <a href="#estimator" class="btn btn-cream nav-cta">Get my rate
         <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="14" x2="21" y2="14"/><line x1="3" y1="21" x2="15" y2="21"/></svg>
+      </button>
     </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#how-it-works">How it works</a>
+    <a href="#process">The platform</a>
+    <a href="#developers">Developers</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#estimator" class="mm-cta">Get my rate</a>
   </div>
 </header>
 
@@ -425,10 +435,10 @@
 
 <section class="final">
   <div class="wrap">
-    <h2 class="serif">Get your number<br>in under 10 minutes.</h2>
-    <p>No obligation, no commitment — just a clear picture of what you should be paying.</p>
+    <h2 class="serif">Ready to see<br>your rate?</h2>
+    <p>No lock-in, no setup fees — just enterprise-grade payments infrastructure, live in about a week.</p>
     <div class="cta">
-      <a href="#estimator" class="btn btn-cream btn-lg">Start free review
+      <a href="#estimator" class="btn btn-cream btn-lg">Get my rate
         <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a href="#" class="btn btn-ghost btn-lg">Talk to an advisor</a>
     </div>
@@ -534,6 +544,24 @@
   resize();
   var t0=performance.now();
   (function frame(){requestAnimationFrame(frame);resize();gl.uniform1f(uT,(performance.now()-t0)/1e3);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);})();
+})();
+</script>
+
+<script>
+(function(){
+  var btn = document.getElementById('mobileMenuBtn');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
 })();
 </script>
 
