@@ -79,7 +79,7 @@ header{position:sticky;top:0;z-index:60;background:rgba(250,247,241,0.78);backdr
 .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--peach);animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
 
-.hero-stage{position:relative;margin-top:20px;min-height:760px;}
+.hero-stage{position:relative;margin-top:20px;min-height:485px;}
 .hero-band{position:absolute;top:60px;left:calc((100vw - 100%) / -2);right:calc((100vw - 100%) / -2);height:425px;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(15,18,24,.58),rgba(15,18,24,.40) 35%,rgba(15,18,24,.62)),url('/images/acceptor-hero-image-cropped.png');background-size:cover;background-position:center;}
 .hero-band::after{content:'';position:absolute;inset:0;background-image:var(--grain);background-size:160px 160px;mix-blend-mode:overlay;opacity:.5;pointer-events:none;}
 .phone{width:316px;padding:11px;position:relative;z-index:2;margin:36px auto 0;border-radius:48px;background:#080A0E;box-shadow:0 0 0 1px rgba(255,255,255,.04),0 0 35px rgba(96,145,225,.10),0 0 90px rgba(96,145,225,.08),0 28px 70px rgba(0,0,0,.32),0 10px 24px rgba(0,0,0,.20);}
