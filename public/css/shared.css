@@ -161,6 +161,10 @@ header{position:sticky;top:0;z-index:60;background:rgba(250,247,241,0.78);backdr
 /* bleed / glass */
 .bleed{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;border-top:1px solid var(--frame);border-bottom:1px solid var(--frame);}
 .bleed .copy,.bleed .stage{min-width:0;}
+/* Grid-blowout prevention — every grid item below holds variable-length text
+   and needs min-width:0 or its content can force the track wider than its
+   1fr share, exactly like the price-cards bug. Applied preemptively. */
+.price-card,.qcard,.stat-cell,.process-card,.pillar,.fcol,.plan-main,.twoup .col,.dash-stats div{min-width:0;}
 .bleed .copy{display:flex;flex-direction:column;justify-content:center;text-align:left;padding:120px 64px;border-right:1px solid var(--frame);}
 .bleed .copy h2,.bleed .copy p{width:420px;max-width:100%;}
 .bleed h2{font-size:clamp(32px,3.4vw,46px);font-weight:300;letter-spacing:-0.045em;line-height:1.08;color:rgba(20,23,30,.90);}
