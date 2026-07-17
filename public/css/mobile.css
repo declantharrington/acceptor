@@ -22,8 +22,11 @@
   .process-grid,.pillars{grid-template-columns:1fr 1fr;}
   .stat-strip{grid-template-columns:1fr;}
   .stat-cell{border-right:none;border-bottom:1px solid var(--frame);}
-  .fcols{grid-template-columns:1fr 1fr;}
+  .fcols{grid-template-columns:1fr;}
   .fbrand{grid-column:1/-1;}
+  .fcol a{padding:11px 0;}
+  .doc-status,.dash-stats span,.web-node,.web-core span{font-size:12px;}
+  .problem-grid{grid-template-columns:1fr;gap:24px;}
 
   /* nav → hamburger */
   .nav-right .lnk,.nav-right .nav-cta{display:none;}
@@ -31,7 +34,7 @@
 
   /* rescued from shared.css — component-specific mobile tuning */
   .qgrid{grid-template-columns:1fr;}
-  .provider-web{transform:scale(.85);transform-origin:center;}
+  .provider-web{transform:scale(.92);transform-origin:center;}
   .scheme-row{gap:10px;}
   .scheme-badge{font-size:12.5px;padding:8px 14px;}
   .price-cards{grid-template-columns:1fr;}
