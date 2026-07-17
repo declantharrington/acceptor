@@ -271,6 +271,7 @@ footer{position:relative;z-index:2;color:var(--cream);}
 .scheme-badge:hover{color:var(--cream);border-color:rgba(20,23,30,.28);}
 
 .type-icon{width:44px;height:44px;border-radius:12px;background:rgba(20,23,30,.045);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--cream);flex-shrink:0;}
+#process .type-icon{border-radius:50%;background:rgba(44,99,199,.07);border-color:rgba(44,99,199,.18);color:var(--peach);}
 .type-icon svg{width:22px;height:22px;}
 
 /* Live dashboard preview (replaces statement-scanner visual) */
@@ -320,3 +321,11 @@ footer{position:relative;z-index:2;color:var(--cream);}
 .mobile-menu a{padding:16px 26px;font-size:15px;color:var(--cream-soft);border-top:1px solid var(--line);text-decoration:none;}
 .mobile-menu a.mm-cta{color:var(--cream);font-weight:600;}
 .mobile-menu.open{display:flex;}
+
+/* Problem section — deliberately asymmetric/left-aligned, breaking the
+   centered eyebrow+h2+sub rhythm used everywhere else on the page. */
+.problem{padding:110px 0;border-bottom:1px solid var(--frame);}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;text-align:left;}
+.problem-grid h2{font-size:clamp(28px,3vw,38px);font-weight:300;letter-spacing:-0.03em;line-height:1.15;color:rgba(20,23,30,.90);margin-top:18px;}
+.problem-grid p{font-size:16.5px;color:var(--cream-soft);line-height:1.65;margin-bottom:16px;}
+.problem-grid p:last-child{color:var(--cream);font-weight:600;margin-bottom:0;}
