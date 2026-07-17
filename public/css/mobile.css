@@ -4,6 +4,10 @@
    var(--frame) / var(--line) / var(--cream*) etc.
    rather than hardcoded rgba literals — hardcoding
    breaks if/when the theme is ever overridden again.
+
+   This file is the SINGLE source of truth for
+   responsive rules. Do not add @media blocks to
+   shared.css — they belong here, full stop.
    ============================================ */
 
 @media(max-width:900px){
@@ -20,9 +24,30 @@
   .stat-cell{border-right:none;border-bottom:1px solid var(--frame);}
   .fcols{grid-template-columns:1fr 1fr;}
   .fbrand{grid-column:1/-1;}
-  .nav-right .lnk{display:none;}
+
+  /* nav → hamburger */
+  .nav-right .lnk,.nav-right .nav-cta{display:none;}
+  .mobile-menu-btn{display:flex;}
+
+  /* rescued from shared.css — component-specific mobile tuning */
+  .qgrid{grid-template-columns:1fr;}
+  .provider-web{transform:scale(.85);transform-origin:center;}
+  .scheme-row{gap:10px;}
+  .scheme-badge{font-size:12.5px;padding:8px 14px;}
+  .price-cards{grid-template-columns:1fr;}
+
+  /* previously untuned components */
+  .hero-band{height:320px;}
+  .hero-stage{min-height:380px;}
+  .team-grid{gap:28px;}
+  .code-card{width:100%;}
+  .dash-bars{height:60px;}
+  .price-cards .price-card{padding:18px;}
 }
 @media(max-width:560px){
   .process-grid,.pillars{grid-template-columns:1fr;}
   .disclosure .acard{grid-template-columns:1fr;}
+  .team-grid{flex-direction:column;align-items:center;}
+  .code-body{font-size:11px;}
+  .scheme-row{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;}
 }
