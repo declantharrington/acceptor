@@ -53,7 +53,7 @@
     </div>
   </div>
   <div class="hero-stage">
-    <div class="hero-band"><canvas id="hero-mg"></canvas></div>
+    <div class="hero-band"></div>
     <div class="phone">
       <div class="screen">
         <div class="sbar"><span>11:43</span><span class="r">●●●</span></div>
@@ -136,7 +136,6 @@
     <p>Adjust the numbers to see roughly where your business would land on our platform. It's the same starting point we'd refine properly in your free review.</p>
   </div>
   <div class="stage">
-    <canvas class="mg" id="bleed-mg"></canvas>
     <div class="glass">
       <div class="gh"><div class="t">Your estimate</div><div class="s">Updates as you adjust</div></div>
 
@@ -603,43 +602,6 @@
   var t0=performance.now();
   (function frame(){requestAnimationFrame(frame);resize();gl.uniform1f(uT,(performance.now()-t0)/1e3);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);})();
 })();
-
-/* ── Hero + bleed mesh gradients ── */
-function initMG(id){
-  var canvas=document.getElementById(id);if(!canvas)return;
-  var gl=canvas.getContext('webgl');if(!gl)return;
-  var VS='attribute vec2 p;void main(){gl_Position=vec4(p,0,1);}';
-  var FS=[
-    'precision highp float;uniform float u_t;uniform vec2 u_r;',
-    'vec3 hsl2rgb(float h,float s,float l){vec3 rgb=clamp(abs(mod(h*6.+vec3(0.,4.,2.),6.)-3.)-1.,0.,1.);return l+s*(rgb-.5)*(1.-abs(2.*l-1.));}',
-    'vec2 gh(vec2 p){p=vec2(dot(p,vec2(127.1,311.7)),dot(p,vec2(269.5,183.3)));return fract(sin(p)*43758.5453)*2.-1.;}',
-    'float gn(vec2 p){vec2 i=floor(p),f=fract(p),u=f*f*(3.-2.*f);return mix(mix(dot(gh(i),f),dot(gh(i+vec2(1,0)),f-vec2(1,0)),u.x),mix(dot(gh(i+vec2(0,1)),f-vec2(0,1)),dot(gh(i+vec2(1)),f-vec2(1)),u.x),u.y);}',
-    'void main(){',
-    '  vec2 uv=gl_FragCoord.xy/u_r;uv.y=1.-uv.y;float t=u_t*1.5;',
-    '  vec2 d=vec2(gn(uv*2.3+vec2(t*.2,0.))*.15,gn(uv*2.3+vec2(0.,t*.2)+5.7)*.15);',
-    '  vec2 q=uv+d;vec2 cen=q-.5;float ang=length(cen)*3.*.1+t*.15;float cs=cos(ang),sn=sin(ang);',
-    '  vec2 sw=vec2(cs*cen.x-sn*cen.y,sn*cen.x+cs*cen.y)+.5;',
-    '  vec3 c0=hsl2rgb(220./360.,.20,.10),c1=hsl2rgb(220./360.,.55,.40),c2=hsl2rgb(215./360.,.65,.65),c3=hsl2rgb(213./360.,.72,.80);',
-    '  float n1=gn(sw*2.5+t*.10)*.5+.5,n2=gn(sw*1.8-t*.12+3.1)*.5+.5,n3=gn(sw*3.2+t*.08+7.4)*.5+.5;',
-    '  n1=smoothstep(.15,.85,n1);n2=smoothstep(.15,.85,n2);n3=smoothstep(.15,.85,n3);',
-    '  gl_FragColor=vec4(mix(mix(c0,c1,n1),mix(c2,c3,n2),n3),1.);',
-    '}'
-  ].join('\n');
-  function mk(t,s){var sh=gl.createShader(t);gl.shaderSource(sh,s);gl.compileShader(sh);return sh;}
-  var prog=gl.createProgram();
-  gl.attachShader(prog,mk(gl.VERTEX_SHADER,VS));gl.attachShader(prog,mk(gl.FRAGMENT_SHADER,FS));
-  gl.linkProgram(prog);gl.useProgram(prog);
-  var buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-  var a=gl.getAttribLocation(prog,'p');gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,2,gl.FLOAT,false,0,0);
-  var uT=gl.getUniformLocation(prog,'u_t'),uR=gl.getUniformLocation(prog,'u_r');
-  function resize(){var w=canvas.clientWidth|0,h=canvas.clientHeight|0;if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;gl.viewport(0,0,w,h);}gl.uniform2f(uR,w,h);}
-  resize();new ResizeObserver(resize).observe(canvas);
-  var t0=performance.now();
-  (function frame(){requestAnimationFrame(frame);resize();gl.uniform1f(uT,(performance.now()-t0)/1e3);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);})();
-}
-initMG('bleed-mg');
-initMG('hero-mg');
 </script>
 
 <script>
